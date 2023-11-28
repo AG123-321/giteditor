@@ -64,7 +64,7 @@ input[type=text] {
     display: none;
 }
 
-h2 {
+#repos-list {
     text-align: center;
 }
 
@@ -76,5 +76,26 @@ button {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-    
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+i {
+    text-align: center;
+    color: white;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+}
+
+h3 {
+    text-align: center;
+    color: white;
 }
