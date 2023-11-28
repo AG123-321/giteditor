@@ -1,13 +1,5 @@
-function popup(text) {
-    $("#popupwindow").show();  
-}
-function editrepo(githubUrl) {
-    
-}
-
-function keypress(key) {
-    if (key == "Enter") {
-        alert("Hi")
+window.onload = function() {
+    if (localStorage.getItem("github-user-token") == null) {
+        $('#noauth').show()
     }
-    else {}
 }

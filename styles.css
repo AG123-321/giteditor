@@ -3,9 +3,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
-body :not(#notloggedin-popup) {
-    opacity: 13%;
+#noauth {
+    text-align: center;
+    color: red;
 }
+
+/* body :not(#notloggedin-popup) { */
+    /* opacity: 13%; */
+/* } */
 
 h1 {
     color: white;
@@ -53,4 +58,23 @@ input[type=text] {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: #333;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
 }
