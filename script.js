@@ -36,11 +36,11 @@ window.onload = async function() {
         else {private=""}
 
         if (desc == "none") {
-            $("body").append($("<p></p>").text(reponame + " " + private), $("<h4></h4>").text("No description").css("text-align", "center"), $("<h3></h3>").text("Language:" + lang), $("<h3></h3>").text(repos[i].html_url), $("<br>"))
+            $("body").append($("<p></p>").text(reponame + " " + private), $("<h4></h4>").text("No description").css("text-align", "center"), $("<h3></h3>").text("Language: " + lang), $("<h3></h3>").text(repos[i].html_url), $("<br>"))
         }
 
         else {
-            $("body").append($("<p></p>").text(reponame + " " +private), $("<h4></h4>").text(desc).css("text-align", "center"), $("<h3></h3>").text("Language:" + lang), $("<h3></h3>").text(repos[i].html_url), $("<br>"))
+            $("body").append($("<p></p>").text(reponame + " " +private), $("<h4></h4>").text(desc).css("text-align", "center"), $("<h3></h3>").text("Language: " + lang), $("<h3></h3>").text(repos[i].html_url), $("<br>"))
         }
     }
 }
