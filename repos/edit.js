@@ -15,7 +15,7 @@ async function dir(path) {
   for (let x = 0; x < tree.length; x++) {
     if (tree[x].type = "dir") {
       $("body").append(
-        $("<p></p>")
+        $("<a></a>")
           .text(tree[x].name + " (directory) (tap to expand)")
           .click(async function () {
             await dir(`/repos/AG123-321/giteditor/contents/${tree[x].name}`);
