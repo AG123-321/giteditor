@@ -16,6 +16,7 @@ window.onload = async function() {
 
     else {
     }
+    $('#login-btn').hide()
     repos = await gitapi("/user/repos")
     loading.text(`Showing repositories owned by ${localStorage.getItem("github-name")}`)
     for (let i = 0; i < repos.length; i++) {
