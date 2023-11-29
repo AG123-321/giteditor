@@ -15,9 +15,9 @@ window.onload = async function() {
     }
 
     else {
-        loading.text(`Showing repositories owned by ${localStorage.getItem("github-name")}`)
     }
     repos = await gitapi("/user/repos")
+    loading.text(`Showing repositories owned by ${localStorage.getItem("github-name")}`)
     for (let i = 0; i < repos.length; i++) {
         reponame = repos[i].name
         if (repos[i].description == null) {
