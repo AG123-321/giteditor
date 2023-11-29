@@ -28,12 +28,8 @@ window.onload = async function() {
             desc = repos[i].description
         }
 
-        if (repos[i].language == null)
-            lang = "None"
-        }
-        else {
-            lang = repos[i].language
-        }
+        lang = "none"
+        
         
         if (repos[i].private) {private = "(Private)"}
 
