@@ -13,7 +13,7 @@ async function dir(path) {
   tree = await gitapi(path);
   $("body").append($("<p></p>").text("dir contents:"));
   for (let x = 0; x < tree.length; x++) {
-    if (tree[x].type = "dir") {
+    if (tree[x].type == "dir") {
       $("body").append(
         $("<a></a>")
           .text(tree[x].name + " (directory) (tap to expand)")
