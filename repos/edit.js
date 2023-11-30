@@ -20,7 +20,7 @@ async function dir(path) {
           .click(async function () {
             await dir(`/repos/AG123-321/giteditor/contents/${tree[x].name}`);
           })
-      );
+      );  
     }
 
     else {

@@ -1,0 +1,161 @@
+{
+  "sha": "d06d3e3746a7480551aa6909c2aa735cda20d54e",
+  "url": "https://api.github.com/repos/AG123-321/giteditor/git/trees/d06d3e3746a7480551aa6909c2aa735cda20d54e",
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd54d980996ad8c5482d3bd3e8076d24c384fe2a",
+      "size": 191,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/dd54d980996ad8c5482d3bd3e8076d24c384fe2a"
+    },
+    {
+      "path": "html",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "15cf86e7bf1d9585762996dbd6272f1ac9e2a3f9",
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/trees/15cf86e7bf1d9585762996dbd6272f1ac9e2a3f9"
+    },
+    {
+      "path": "html/auth",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "236e9ce035674a8abce799d6d3e2893649f6ecf4",
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/trees/236e9ce035674a8abce799d6d3e2893649f6ecf4"
+    },
+    {
+      "path": "html/auth/authorize-app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8433a45646f4b1d280b0c6c9d86bc45f96d52608",
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/trees/8433a45646f4b1d280b0c6c9d86bc45f96d52608"
+    },
+    {
+      "path": "html/auth/authorize-app/authorize-app-styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "html/auth/authorize-app/authorize-app.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "html/auth/callback",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45ffb5ea504cc231bf5335f552c99de62d359956",
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/trees/45ffb5ea504cc231bf5335f552c99de62d359956"
+    },
+    {
+      "path": "html/auth/callback/callback.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e21f934e294e5a470bd80c51479cd4244ef4aaa4",
+      "size": 406,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/e21f934e294e5a470bd80c51479cd4244ef4aaa4"
+    },
+    {
+      "path": "html/auth/callback/callback.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "225b3d51011db36a90fdcab3ba62418036030066",
+      "size": 1272,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/225b3d51011db36a90fdcab3ba62418036030066"
+    },
+    {
+      "path": "html/landing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38d6558f55adc27bf80ea3a9a27b00eaa6698ee1",
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/trees/38d6558f55adc27bf80ea3a9a27b00eaa6698ee1"
+    },
+    {
+      "path": "html/landing/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "146965667af6b2daad43a710bb48f727e012a7c4",
+      "size": 772,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/146965667af6b2daad43a710bb48f727e012a7c4"
+    },
+    {
+      "path": "html/landing/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8826526e68d15037ea148da29c7302081273275",
+      "size": 1684,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/f8826526e68d15037ea148da29c7302081273275"
+    },
+    {
+      "path": "html/landing/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3ca007b3832e1f89b43d50683e7d177137367ec",
+      "size": 380,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/a3ca007b3832e1f89b43d50683e7d177137367ec"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94dd4f2199f237742fb56c8f9131868f668223b8",
+      "size": 668,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/94dd4f2199f237742fb56c8f9131868f668223b8"
+    },
+    {
+      "path": "repos",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2357ea549456dd21b9cb8689f4d0d54db306494",
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/trees/e2357ea549456dd21b9cb8689f4d0d54db306494"
+    },
+    {
+      "path": "repos/edit.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "005f60e4002f04ed879c396a37c5faea9cbcd31f",
+      "size": 47,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/005f60e4002f04ed879c396a37c5faea9cbcd31f"
+    },
+    {
+      "path": "repos/edit.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d92f73022b818ed241ebd95107bdf228a489ad",
+      "size": 278,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/92d92f73022b818ed241ebd95107bdf228a489ad"
+    },
+    {
+      "path": "repos/edit.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad7886a849f942d57c7f65fa9bd1e90af024f790",
+      "size": 1297,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/ad7886a849f942d57c7f65fa9bd1e90af024f790"
+    },
+    {
+      "path": "script.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46b65267f7ed836767c87d5f8856115209310ff8",
+      "size": 1551,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/46b65267f7ed836767c87d5f8856115209310ff8"
+    },
+    {
+      "path": "styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b2fab630c0810099b40d90b1191cd66be7089c5",
+      "size": 1533,
+      "url": "https://api.github.com/repos/AG123-321/giteditor/git/blobs/3b2fab630c0810099b40d90b1191cd66be7089c5"
+    }
+  ],
+  "truncated": false
+}
