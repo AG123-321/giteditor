@@ -23,7 +23,7 @@ $("document").ready(async function () {
         addedPaths.push(path);
 
         if (path.includes("/")) {
-          const folderName = path.split("/")[0];
+          const folderName = path.split("/")[-1]
           const folderType = tree.find(
             (item) => item.path === folderName
           )?.type;
