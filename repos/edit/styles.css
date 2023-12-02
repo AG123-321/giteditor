@@ -4,4 +4,12 @@ body {
 
 p {
   color: white;
+  text-align: center;
+  text-decoration: bold;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-size: larger;
 }
