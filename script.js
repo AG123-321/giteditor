@@ -51,6 +51,9 @@ window.onload = async function () {
         $("<h4></h4>").text(desc).css("text-align", "center"),
         $("<h3></h3>").text("Language: " + lang),
         $("<h3></h3>").text(repos[i].html_url),
+        $("<b></b>")
+          .text("edit this repository")
+          .click(function () {}),
         $("<br>")
       );
     }
