@@ -14,32 +14,25 @@ $("document").ready(async function () {
     );
 
     const tree = response.data.tree;
-    const addedPaths = [];
 
     for (let i = 0; i < tree.length; i++) {
       const path = tree[i].path;
 
-      if (!addedPaths.includes(path)) {
-        addedPaths.push(path);
-
+      if ($(`body p:contains("${path}"):first`).length === 0) {
         if (path.includes("/")) {
-          const folderName = path.split("/")[-1]
+          const folderName = path.split("/").slice(-1);
           const folderType = tree.find(
             (item) => item.path === folderName
           )?.type;
 
-          const elementText =
-            folderName + (folderType === "tree" ? " (folder):" : "");
-          $("body").append($("<p></p>").text(elementText));
-
-          console.log("Added:", elementText);
+          $("body").append(
+            $("<p></p>").text(
+              folderName + (folderType === "tree" ? " (folder):" : "")
+            )
+          );
         } else {
           $("body").append($("<p></p>").text(path));
-
-          console.log("Added:", path);
         }
-      } else {
-        console.log("Skipped (Duplicate):", path);
       }
     }
   } catch (e) {
