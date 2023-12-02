@@ -1,6 +1,8 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 $("document").ready(async function () {
+  right
+  
   try {
     const gh = new Octokit({
       auth: `${localStorage.getItem("github-user-token")}`,
