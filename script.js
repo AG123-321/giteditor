@@ -43,6 +43,13 @@ window.onload = async function () {
         $("<h4></h4>").text("No description").css("text-align", "center"),
         $("<h3></h3>").text("Language: " + lang),
         $("<h3></h3>").text(repos[i].html_url),
+        $("<h3></h3>")
+          .text("edit this repository")
+          .click(function () {
+            window.location.href = `/repos/edit?name=${
+              repos[i].name
+            }&user=${localStorage.getItem("github-name")}`;
+          }),
         $("<br>")
       );
     } else {
@@ -51,9 +58,13 @@ window.onload = async function () {
         $("<h4></h4>").text(desc).css("text-align", "center"),
         $("<h3></h3>").text("Language: " + lang),
         $("<h3></h3>").text(repos[i].html_url),
-        $("<b></b>")
+        $("<h3></h3>")
           .text("edit this repository")
-          .click(function () {}),
+          .click(function () {
+            window.location.href = `/repos/edit?name=${
+              repos[i].name
+            }&user=${localStorage.getItem("github-name")}`;
+          }),
         $("<br>")
       );
     }

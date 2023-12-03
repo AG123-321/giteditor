@@ -46,37 +46,62 @@ $("document").ready(async function () {
 
     state.text(`loading repo contents: ${user}/${reponame}`);
     let response = await gh.request(`GET /repos/${user}/${reponame}`, {});
-    const repo = response.data;
-    const branch = repo.default_branch;
+    let repo = response.data;
+    let branch = repo.default_branch;
+
+    try {
+      await gh.request(
+        `GET /repos/${user}/${reponame}/git/trees/${branch}?recursive=true`
+      );
+    } catch (e) {
+      if (e == "HttpError: Git Repository is empty.") {
+        $("body").append($("<p></p>").text("<git repository empty>"));
+        return;
+      }
+    }
+
+    state.text(`loading repo contents: ${user}/${reponame}`);
+    response = await gh.request(`GET /repos/${user}/${reponame}`, {});
+    repo = response.data;
+    branch = repo.default_branch;
     response = await gh.request(
       `GET /repos/${user}/${reponame}/git/trees/` + branch + "?recursive=true"
     );
 
     const tree = response.data.tree;
-
+    let type = " ";
     for (let i = 0; i < tree.length; i++) {
       const path = tree[i].path;
-
-      if ($(`body p:contains("${path}"):first`).length === 0) {
-        if (path.includes("/")) {
-          const folderName = path.split("/").slice(-1);
-          const folderType = tree.find(
-            (item) => item.path === folderName
-          )?.type;
-
-          $("body").append(
-            $("<p></p>").text(
-              folderName + (folderType === "tree" ? " (folder):" : "")
-            )
-          );
-        } else {
-          $("body").append($("<p></p>").text(path));
-        }
+      if (tree[i].type == "tree") {
+        type = " (folder):";
+      } else {
+        type = "";
+      }
+      if (path.includes("/")) {
+        $("body").append(
+          $("<p></p>")
+            .text(path + type)
+            .click(function () {
+              window.location.href = `/repos/edit/file?repo=${localStorage.getItem(
+                "github-name"
+              )}/${reponame}&fname=${tree[i].path}`;
+            })
+        );
+      } else {
+        $("body").append(
+          $("<p></p>")
+            .text(path + type)
+            .click(function () {
+              window.location.href = `/repos/edit/file?repo=${localStorage.getItem(
+                "github-name"
+              )}/${reponame}&fname=${tree[i].path}`;
+            })
+        );
       }
     }
   } catch (e) {
     console.log("Error: " + e);
     alert("500 UNKNOWN_ERROR. nothing we can do about it. try retrying?");
-    // history.back();
+    history.back();
   }
 });
