@@ -77,26 +77,37 @@ $("document").ready(async function () {
       } else {
         type = "";
       }
+
+      $("body").append(
+        $("<p></p>")
+          .text(path + type)
+          .click(function () {
+            window.location.href = `/repos/edit/file?repo=${localStorage.getItem(
+              "github-name"
+            )}/${reponame}&fname=${tree[i].path}`;
+          })
+      );
+    
       if (path.includes("/")) {
-        $("body").append(
-          $("<p></p>")
-            .text(path + type)
-            .click(function () {
-              window.location.href = `/repos/edit/file?repo=${localStorage.getItem(
-                "github-name"
-              )}/${reponame}&fname=${tree[i].path}`;
-            })
-        );
+        // $("body").append(
+        //   $("<p></p>")
+        //     .text(path + type)
+        //     .click(function () {
+        //       window.location.href = `/repos/edit/file?repo=${localStorage.getItem(
+        //         "github-name"
+        //       )}/${reponame}&fname=${tree[i].path}`;
+        //     })
+        // );
       } else {
-        $("body").append(
-          $("<p></p>")
-            .text(path + type)
-            .click(function () {
-              window.location.href = `/repos/edit/file?repo=${localStorage.getItem(
-                "github-name"
-              )}/${reponame}&fname=${tree[i].path}`;
-            })
-        );
+        // $("body").append(
+        //   $("<p></p>")
+        //     .text(path + type)
+        //     .click(function () {
+        //       window.location.href = `/repos/edit/file?repo=${localStorage.getItem(
+        //         "github-name"
+        //       )}/${reponame}&fname=${tree[i].path}`;
+        //     })
+        // );
       }
     }
   } catch (e) {
