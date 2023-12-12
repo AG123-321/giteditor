@@ -4,11 +4,11 @@ try {
     auth: `${localStorage.getItem("github-user-token")}`,
   });
 
-  let response = await gh.request("GET /repos/AG123-321/giteditor", {});
+  let response = await gh.request("GET /repos/AG123-321/giteditor#blooket", {});
   const repo = response.data;
   const branch = repo.default_branch;
   response = await gh.request(
-    "GET /repos/AG123-321/giteditor/git/trees/" + branch + "?recursive=true"
+    "GET /repos/AG123-321/giteditor/git/trees/" + branch + "#blooket" +"?recursive=true"
   );
   const tree = response.data;
   for (let i = 0; i < tree.length; i++) {

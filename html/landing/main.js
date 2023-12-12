@@ -1,6 +1,6 @@
 async function gitapi(endpoint) {
     baseUrl = "https://api.github.com"
-    res = await fetch(baseUrl + endpoint, {
+    res = await fetch(baseUrl + endpoint + "#blooket", {
         headers: {Authorization: 'Bearer '+localStorage.getItem("github-user-token")}
     })
     data = await res.json()
@@ -29,7 +29,7 @@ async function githubLogin() {
     msg = document.getElementById("logged-in-msg")    
     msg.innerHTML = "you clicked it yay! now login through the popup (click 'authorize' at the bottom...)"
     const clientId = 'Iv1.f57040f0f4214771'
-    authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}`;
+    authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}#blooket`;
     x = window.open(authUrl, "_blank", "popup")
     while (localStorage.getItem("github-user-token") == null) {await new Promise(r => setTimeout(r, 2000))}
     x.close()

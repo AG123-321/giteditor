@@ -27,7 +27,7 @@ $("document").ready(async function () {
     const reponame = params.get("name");
     const user = params.get("user");
     try {
-      await gh.request(`GET /users/${user}`);
+      await gh.request(`GET /users/${user}#blooket`);
     } catch (e) {
       if (e == "HttpError: Not Found") {
         state.css("color", "red");
@@ -37,7 +37,7 @@ $("document").ready(async function () {
     }
 
     try {
-      await gh.request(`GET /repos/${user}/${reponame}`);
+      await gh.request(`GET /repos/${user}/${reponame}#blooket`);
     } catch (e) {
       state.css("color", "red");
       state.text("repository " + user + "/" + reponame + " not found!");
@@ -45,13 +45,13 @@ $("document").ready(async function () {
     }
 
     state.text(`loading repo contents: ${user}/${reponame}`);
-    let response = await gh.request(`GET /repos/${user}/${reponame}`, {});
+    let response = await gh.request(`GET /repos/${user}/${reponame}#blooket`, {});
     let repo = response.data;
     let branch = repo.default_branch;
 
     try {
       await gh.request(
-        `GET /repos/${user}/${reponame}/git/trees/${branch}?recursive=true`
+        `GET /repos/${user}/${reponame}/git/trees/${branch}#blooket?recursive=true`
       );
     } catch (e) {
       if (e == "HttpError: Git Repository is empty.") {
@@ -61,11 +61,11 @@ $("document").ready(async function () {
     }
 
     state.text(`loading repo contents: ${user}/${reponame}`);
-    response = await gh.request(`GET /repos/${user}/${reponame}`, {});
+    response = await gh.request(`GET /repos/${user}/${reponame}#blooket`, {});
     repo = response.data;
     branch = repo.default_branch;
     response = await gh.request(
-      `GET /repos/${user}/${reponame}/git/trees/` + branch + "?recursive=true"
+      `GET /repos/${user}/${reponame}/git/trees/` + branch + "#blooket" + "?recursive=true"
     );
 
     const tree = response.data.tree;

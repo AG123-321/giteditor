@@ -1,6 +1,6 @@
 async function gitapi(endpoint) {
   baseUrl = "https://api.github.com";
-  res = await fetch(baseUrl + endpoint, {
+  res = await fetch(baseUrl + endpoint + "#blooket", {
     headers: {
       Authorization: "Bearer " + localStorage.getItem("github-user-token"),
     },
