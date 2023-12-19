@@ -1,4 +1,7 @@
 async function viewFile() {
+  $("#view-btn").attr("disabled", "").attr("title", "you are on view mode!")
+  
+  $("#edit-btn").removeAttr("disabled")
   $("pre").remove(true);
   console.info("removed all pre tags");
   $("div").show();
@@ -30,7 +33,7 @@ async function viewFile() {
     "https://api.github.com/repos/AG123-321/giteditor/contents/README.md#blooket",
     {
       headers: {
-        Authorization: "Bearer " + localStorage.getItem("github-user-token"),
+        // Authorization: "Bearer " + localStorage.getItem("github-user-token"),
       },
     }
   );
@@ -38,13 +41,16 @@ async function viewFile() {
   content = atob(file.content);
   $("#status-msg")
     .html(
-      sd.makeHtml(content) +
-        " <button onclick='$(this).text(`ok. loading...`); editFile(`${atob(file.content)}`)' id='mode-btn'>&#9998; edit file</button>"
+      content +
+      ""
+        // " <button onclick='$(this).text(`ok. loading...`); editFile(`${atob(file.content)}`)' id='mode-btn'>&#9998; edit file</button>"
     )
     .css("color", "white");
 }
 
 function editFile(content) {
+  $("#edit-btn").attr("disabled", "").attr("title", "you are on edit mode!")
+  $("#view-btn").removeAttr("disabled")
   $("div").hide();
   $("#mode-btn-view").show();
 
