@@ -12,14 +12,13 @@ body {
 }
 
 #parent {
-  width:99%;
+  width: 99%;
   height: 600px;
-  display:inline-block;
-  position:relative;
+  display: inline-block;
+  position: relative;
 }
 
 #status-msg {
   border: 1px solid grey;
   border-radius: 7px;
-  
 }
