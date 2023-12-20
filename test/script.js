@@ -1,5 +1,5 @@
-import { Octokit, App } from "https://esm.sh/@octokit/core@5.0.2";
-
+// import { Octokit } from "https://esm.sh/@octokit/core@5.0.2";
+("ghu_gffmNZlAGGn8RGLM8125PsoJ4AxKMo1hi53H");
 async function viewFile() {
   $("#view-btn").attr("disabled", "").attr("title", "you are on view mode!");
   $("#edit-btn").removeAttr("disabled");
@@ -34,12 +34,12 @@ async function viewFile() {
     "https://api.github.com/repos/AG123-321/giteditor/contents/README.md#blooket",
     {
       headers: {
-        Authorization: "Bearer " + "ghu_gffmNZlAGGn8RGLM8125PsoJ4AxKMo1hi53H",
+        Authorization: localStorage.getItem("github-user-token"),
       },
     }
   );
-  file = await response.json();
-  content = atob(file.content);
+  const file = await response.json();
+  const content = atob(file.content);
   $("#status-msg")
     .html(
       content + ""
@@ -67,10 +67,10 @@ function editFile(content) {
 }
 
 $("body").ready(async function () {
-  const octokit = new Octokit({
-    auth: "ghu_gffmNZlAGGn8RGLM8125PsoJ4AxKMo1hi53H",
+  const gh = new Octokit({
+    auth: localStorage.getItem("github-user-token"),
   });
-  await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}#blooket", {
+  await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
     owner: "AG123-321",
     repo: "giteditor",
     path: "newfile.js",
@@ -82,5 +82,7 @@ $("body").ready(async function () {
     content: "test",
   });
   $("#mode-btn-view").hide();
+  $("#view-btn").attr("onclick", "viewFile()");
+  $("#edit-btn").attr("onclick", "editFile()");
   viewFile();
 });
